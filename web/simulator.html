@@ -1,0 +1,35 @@
+<script src="https://cdn.netpie.io/microgear.js"></script>
+<script type="text/javascript">
+const API_KEY = 'nvd9xrdwgkpwW6e'
+const API_SECRET = 'Hu1K5Nu0hNqwNMhk2RPAlqIMe'
+const API_APP_ID = 'CarParking'
+
+var microgear = Microgear.create({
+	key: API_KEY,
+	secret: API_SECRET,
+	alias : "simulator"         /*  optional  */
+});
+
+microgear.on('message',function(topic,msg) {
+	console.log(msg)
+});
+
+microgear.on('connected', function() {
+// 	microgear.setAlias('htmlgear');    /* al ias can be renamed anytime with this function */
+// 	document.getElementById("data").innerHTML = "Now I am connected with netpie...";
+	setInterval(function() {
+		microgear.chat('mydashboard',"300 470 "+Date.now());
+		console.log('sent')
+	},500);
+});
+
+microgear.on('present', function(event) {
+	console.log('present',event);
+});
+
+microgear.on('absent', function(event) {
+	console.log('absent',event);
+});
+
+microgear.connect(API_APP_ID);
+</script>

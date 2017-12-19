@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>Car Parking</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <script src="https://cdn.netpie.io/microgear.js"></script>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="https://rawgithub.com/craftyjs/Crafty/release/dist/crafty-min.js"></script>
+    </head>
+    <body class="addTopMargin">
+        <div class="container">
+            <h1>Parking Sensor</h1>
+            <div class="row addTopMargin">
+                
+                <div class="col-sm-4 col-xs-12">
+                    <div class="card h-100 text-white bg-info mb-3">
+                      <h4 class="card-header"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Left</h4>
+                      <div class="card-body">
+                        <h4 class="card-title text-center" id="dLeft">- cm</h4>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <div class="card h-100 text-white bg-success mb-3">
+                      <h4 class="card-header">Status <i class="fa fa-check-circle-o" aria-hidden="true"></i></h4>
+                      <div class="card-body">
+                        <h4 class="card-title text-center text-capitalize" id="status">-</h4>
+                        <!--<a href="#" class="btn btn-primary" onclick="switchToggle()">Turn off</a>-->
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <div class="card h-100 text-white bg-primary mb-3">
+                      <h4 class="card-header">Right <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></h4>
+                      <div class="card-body">
+                        <h4 class="card-title text-center" id="dRight">- cm</h4>
+                      </div>
+                    </div>
+                </div>
+                <!--<div class="col-md-3 col-sm-6 col-xs-12">-->
+                <!--    <div class="card h-100">-->
+                <!--      <h4 class="card-header">Self destruction</h4>-->
+                <!--      <div class="card-body">-->
+                <!--        <h4 class="card-title text-center">Ready</h4>-->
+                <!--        <a href="#" class="btn btn-danger">PUSH ME</a>-->
+                <!--      </div>-->
+                <!--    </div>-->
+                <!--</div>-->
+            </div>
+            <div class="row addTopMargin">
+                <div class="col">
+                    <div class="card">
+                        <h4 class="card-header">Visualizer</h4>
+                        <div class="card-body">
+                            <div id="game"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="game.js"></script>
+        <div id="data" class="d-none"></div>
+    </body>
+</html>
